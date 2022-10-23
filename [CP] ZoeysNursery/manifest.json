@@ -1,0 +1,17 @@
+{
+  "Name": "[CP] Zoey's Nursery",
+  "Author": "hmkiesel",
+  "Version": "1.0.1",
+  "Description": "Adds a new NPC: Zoey, who owns a nursery",
+  "UniqueID": "hmkiesel.CP_ZoeysNursery",
+  "UpdateKeys": ["Nexus:"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "mod.kitchen.minecartpatcher",
+      "IsRequired": true
+    }
+  ]
+}

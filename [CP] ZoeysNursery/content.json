@@ -1,0 +1,47 @@
+{
+  "Format": "1.27.0",
+  "CustomLocations": [
+    {
+      "Name": "Custom_ZoeysNurseryGrove",
+      "FromMapFile": "assets/ZoeysNursery_Grove.tmx"
+    },
+    {
+      "Name": "Custom_ZoeysNurserySerenityGardens",
+      "FromMapFile": "assets/ZoeysNursery_SerenityGardens.tmx"
+    }
+  ],
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "MinecartPatcher.Minecarts",
+      "Entries": {
+        "morecarts.zoeysNurseryGrove": {
+          "LocationName": "Custom_ZoeysNurseryGrove",
+          "DisplayName": "Grove",
+          "LandingPointX": 45,
+          "LandingPointY": 5,
+          "LandingPointDirection": 2,
+          "IsUnderground": false
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "Entries": {
+        "Custom_ZoeysNurserySerenityGardens": "20 .8 16 .6/396 .6 398 .9/404 .5 406 .5 408 .9/414 .3 418 .5 283 .6/129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1 267 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1",
+        "Custom_ZoeysNurseryGrove": "20 .8 16 .6/396 .6 398 .9/404 .5 406 .5 408 .9/414 .3 418 .5 283 .6/129 -1 131 -1 147 -1 148 -1 152 -1 708 -1 267 -1/128 -1 130 -1 146 -1 149 -1 150 -1 152 -1 155 -1 708 -1 701 -1 267 -1/129 -1 131 -1 148 -1 150 -1 152 -1 154 -1 155 -1 705 -1 701 -1/708 -1 130 -1 131 -1 146 -1 147 -1 150 -1 151 -1 152 -1 154 -1 705 -1/384 .08 589 .09 102 .15 390 .25 330 1"
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ZoeysNurserySerenityGardens",
+      "AddWarps": ["59 65 Custom_ZoeysNurseryGrove 1 1"]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ZoeysNurseryGrove",
+      "AddWarps": ["0 1 Custom_ZoeysNurserySerenityGardens 58 65"]
+    }
+  ]
+}

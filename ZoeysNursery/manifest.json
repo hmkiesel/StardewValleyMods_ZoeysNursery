@@ -1,0 +1,10 @@
+﻿{
+  "Name": "ZoeysNursery",
+  "Author": "hmkiesel",
+  "Version": "1.0.0",
+  "Description": "Adds new NPC Zoey, who owns a nursery and sells plants",
+  "UniqueID": "hmkiesel.ZoeysNursery",
+  "EntryDll": "ZoeysNursery.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": []
+}
