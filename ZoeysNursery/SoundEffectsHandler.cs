@@ -104,12 +104,13 @@ namespace ZoeysNursery
 
             // Get the audio file and add it to a SoundEffect.
             SoundEffect waterfallAudio;
-            string filePathCombined = Path.Combine(helper.DirectoryPath, "waterfall.wav");
+            string filePathCombined = Path.Combine(helper.DirectoryPath, "assets", "waterfall.wav");
 
             using (var stream = new System.IO.FileStream(filePathCombined, System.IO.FileMode.Open))
             {
                 waterfallAudio = SoundEffect.FromStream(stream);
             }
+
             // Setting the sound effect to the new cue.
             waterfallCueDefinition.SetSound(waterfallAudio, Game1.audioEngine.GetCategoryIndex("Ambient"), true);
 
