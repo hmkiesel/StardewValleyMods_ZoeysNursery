@@ -8,9 +8,80 @@
   <ItemGroup>
     <None Remove="Pathoschild.Stardew.ModBuildConfig" />
     <None Remove="ICSharpCode.Decompiler" />
+    <None Remove="waterfall.wav" />
+    <None Remove="[CP] ZoeysNursery\manifest.json" />
+    <None Remove="[CP] ZoeysNursery\content.json" />
+    <None Remove="[CP] ZoeysNursery\assets\fall_extrasTileSheet.png" />
+    <None Remove="[CP] ZoeysNursery\assets\fall_zoeysNursery_minecarts.png" />
+    <None Remove="[CP] ZoeysNursery\assets\spring_extrasTileSheet.png" />
+    <None Remove="[CP] ZoeysNursery\assets\spring_zoeysNursery_minecarts.png" />
+    <None Remove="[CP] ZoeysNursery\assets\summer_extrasTileSheet.png" />
+    <None Remove="[CP] ZoeysNursery\assets\summer_zoeysNursery_minecarts.png" />
+    <None Remove="[CP] ZoeysNursery\assets\winter_extrasTileSheet.png" />
+    <None Remove="[CP] ZoeysNursery\assets\winter_zoeysNursery_minecarts.png" />
+    <None Remove="[CP] ZoeysNursery\assets\zoeysNursery_customTiles.png" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_flowers.png" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_Greenhouse.png" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_Grove.tmx" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_SerenityGardens.tmx" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.0.1" />
     <PackageReference Include="ICSharpCode.Decompiler" Version="7.2.1.6856" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="waterfall.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\content.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\fall_extrasTileSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\fall_zoeysNursery_minecarts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\spring_extrasTileSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\spring_zoeysNursery_minecarts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\summer_extrasTileSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\summer_zoeysNursery_minecarts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\winter_extrasTileSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\winter_zoeysNursery_minecarts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\zoeysNursery_customTiles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_flowers.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_Greenhouse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_Grove.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_SerenityGardens.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="[CP] ZoeysNursery\assets\fall_zoeysNursery_minecarts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
