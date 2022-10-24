@@ -25,9 +25,10 @@
     <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_SerenityGardens.tmx" />
     <None Remove="assets\" />
     <None Remove="assets\waterfall.wav" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShop.tmx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.0.1" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.0.2" />
     <PackageReference Include="ICSharpCode.Decompiler" Version="7.2.1.6856" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +78,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="assets\waterfall.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShop.tmx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -8,6 +8,10 @@
     {
       "Name": "Custom_ZoeysNurserySerenityGardens",
       "FromMapFile": "assets/ZoeysNursery_SerenityGardens.tmx"
+    },
+    {
+      "Name": "Custom_ZoeysNurseryPlantShop",
+      "FromMapFile": "assets/ZoeysNursery_PlantShop.tmx"
     }
   ],
   "Changes": [
@@ -42,6 +46,16 @@
       "Action": "EditMap",
       "Target": "Maps/Custom_ZoeysNurseryGrove",
       "AddWarps": ["0 1 Custom_ZoeysNurserySerenityGardens 58 65"]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ZoeysNurserySerenityGardens",
+      "AddWarps": ["19 24 Custom_ZoeysNurseryPlantShop 8 18"]
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ZoeysNurseryPlantShop",
+      "AddWarps": ["8 19 Custom_ZoeysNurserySerenityGardens 19 25"]
     }
   ]
 }
