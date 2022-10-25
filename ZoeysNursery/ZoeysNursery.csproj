@@ -26,6 +26,8 @@
     <None Remove="assets\" />
     <None Remove="assets\waterfall.wav" />
     <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShop.tmx" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShopTiles_rainy.png" />
+    <None Remove="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShopTiles.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.0.2" />
@@ -81,6 +83,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShop.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="**/*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShopTiles.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
