@@ -2,18 +2,22 @@
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.TerrainFeatures;
+using StardewModdingAPI;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using System.Linq;
 
 namespace ZoeysNursery
 {
+    /// <summary> processes custom locations/maps </summary>
     public class LocationHandler
     {
+        private IMonitor monitor;
         public Dictionary<String, List<Vector2>> WaterfallPositionsByLocation { get; } = new Dictionary<string, List<Vector2>>();
 
-        public LocationHandler()
+        public LocationHandler(IMonitor monitor)
         {
+            this.monitor = monitor;
         }
 
         /// <summary>

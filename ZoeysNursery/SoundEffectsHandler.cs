@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace ZoeysNursery
 {
+    /// <summary> builds cues for custom sound effects and handles dynamic volume for spatial sound effects </summary>
     public class SoundEffectsHandler
     {
         private IModHelper helper;

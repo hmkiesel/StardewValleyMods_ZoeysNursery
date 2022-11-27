@@ -35,7 +35,7 @@ namespace ZoeysNursery
         {
             monitor = this.Monitor;
             soundEffectsHandler = new SoundEffectsHandler(helper, monitor);
-            locationHandler = new LocationHandler();
+            locationHandler = new LocationHandler(monitor);
 
             helper.Events.GameLoop.UpdateTicked += this.update;
             helper.Events.GameLoop.DayStarted += this.dayStarted;

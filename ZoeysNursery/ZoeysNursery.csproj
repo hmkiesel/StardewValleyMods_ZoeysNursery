@@ -88,6 +88,21 @@
     <Content Include="**/*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Remove=".vs\**" />
+    <Compile Remove="bin\**" />
+    <Compile Remove="obj\**" />
+    <Content Remove=".vs\**" />
+    <Content Remove="bin\**" />
+    <Content Remove="obj\**" />
+    <EmbeddedResource Remove=".vs\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove=".vs\**" />
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
+    <Content Remove="LocationHandler.cs" />
+    <Content Remove="ModEntry.cs" />
+    <Content Remove="SoundEffectsHandler.cs" />
     <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShopTiles.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -99,5 +114,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="ZoeysNursery.csproj">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="ZoeysNursery.sln">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
