@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="3">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="60" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="3">
  <properties>
   <property name="AmbientLight" value="120 65 120"/>
   <property name="Fall_Objects" value="281 .5 404 .6 420 .2"/>
   <property name="Holly" value="283 .9"/>
   <property name="Light" value="8 8 6 9 8 6 8 10 6 9 10 6 22 15 6 11 14 6 11 23 6 27 8 6 47 7 6 6 19 5 17 19 6 39 15 6 53 15 6 6 26 6 16 25 6 43 11 6 35 27 6 49 27 6 11 19 6 12 26 6 13 11 6 5 9 6 12 6 6 6 14 6 19 2 6 0 10 6 27 22 6 41 27 6 24 30 6 38 5 6 56 8 6 56 19 6 54 30 6"/>
+  <property name="NPCWarp" value="45 4 BusStop 5 4 46 4 Town 104 80"/>
   <property name="Outdoors" value="T"/>
   <property name="Spring_Objects" value="257 .5 404 .25"/>
   <property name="Stumps" value="24 6 3 29 7 3 26 10 3 46 6 3 34 26 3 41 26 3"/>
   <property name="Summer_Objects" value="258 .9 420 .25"/>
+  <property name="Warp" value="-1 1 Custom_ZoeysNurserySerenityGardens 58 65 -1 2 Custom_ZoeysNurserySerenityGardens 58 65 -1 3 Custom_ZoeysNurserySerenityGardens 58 65 -1 4 Custom_ZoeysNurserySerenityGardens 58 65 -1 0 Custom_ZoeysNurserySerenityGardens 58 65"/>
  </properties>
  <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="36" columns="4">
   <image source="paths" width="64" height="144"/>
@@ -1965,7 +1967,7 @@
  </layer>
  <layer id="2" name="Buildings" width="60" height="32">
   <data encoding="csv">
-0,0,0,0,0,704,704,704,0,704,704,704,704,1181,1181,1182,704,704,704,704,704,704,704,704,704,704,704,704,704,704,1181,1182,1182,704,704,704,704,704,481,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,976,
+670,696,694,212,212,212,212,212,412,704,704,704,704,1181,1181,1182,704,704,704,704,704,704,704,704,704,704,704,704,704,704,1181,1182,1182,704,704,704,704,704,481,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,976,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1181,1182,1181,1182,704,704,1181,1181,1182,704,704,1182,1181,1182,0,0,704,704,704,704,379,405,506,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,976,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1181,1182,0,0,0,1181,1182,0,0,0,0,269,331,332,505,504,404,430,531,0,0,1182,0,0,0,0,1182,0,0,0,0,1181,1182,0,0,0,983,983,1181,1182,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,319,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,356,357,530,529,429,455,556,0,1182,704,1181,1182,1181,1182,970,1181,1182,1181,1182,0,1181,1182,983,1181,1181,1182,0,976,

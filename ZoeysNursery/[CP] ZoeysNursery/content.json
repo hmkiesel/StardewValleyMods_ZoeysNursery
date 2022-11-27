@@ -39,23 +39,111 @@
     },
     {
       "Action": "EditMap",
-      "Target": "Maps/Custom_ZoeysNurserySerenityGardens",
-      "AddWarps": ["59 65 Custom_ZoeysNurseryGrove 1 1"]
+      "Target": "Maps/Town",
+      "MapProperties": { "NPCWarp": "105 79 Custom_ZoeysNurseryGrove 45 5" }
     },
     {
       "Action": "EditMap",
-      "Target": "Maps/Custom_ZoeysNurseryGrove",
-      "AddWarps": ["0 1 Custom_ZoeysNurserySerenityGardens 58 65"]
+      "Target": "Maps/BusStop",
+      "MapProperties": { "NPCWarp": "4 3 Custom_ZoeysNurseryGrove 45 5" }
+    },
+    // Zoey NPC
+    {
+      "Action": "Load",
+      "Target": "Characters/Custom_ZoeysNurseryZoey",
+      "FromFile": "assets/Zoey/sprites.png"
     },
     {
-      "Action": "EditMap",
-      "Target": "Maps/Custom_ZoeysNurserySerenityGardens",
-      "AddWarps": ["19 24 Custom_ZoeysNurseryPlantShop 8 18"]
+      "Action": "Load",
+      "Target": "Portraits/Custom_ZoeysNurseryZoey",
+      "FromFile": "assets/Zoey/portraits.png"
     },
     {
-      "Action": "EditMap",
-      "Target": "Maps/Custom_ZoeysNurseryPlantShop",
-      "AddWarps": ["8 19 Custom_ZoeysNurserySerenityGardens 19 25"]
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Custom_ZoeysNurseryZoey",
+      "FromFile": "assets/Zoey/dialogue.json"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueCustom_ZoeysNurseryZoey",
+      "FromFile": "assets/Zoey/marriageDialogue.json"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/schedules/Custom_ZoeysNurseryZoey",
+      "FromFile": "assets/Zoey/schedule.json"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "Entries": {
+        "Custom_ZoeysNurseryZoey": "adult/polite/neutral/positive/female/datable//Custom_ZoeysNurserySerenityGardens/fall 8//Custom_ZoeysNurserySerenityGardens 45 20/Zoey"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Custom_ZoeysNurseryZoey": "@, this is my favorite! How did you find one? $h/70, 232, 228, 402, 421, 591, 376/This is an incredible gift! $h/22, 18, 106, 283, 372, -80/Oh, is this for me? I'll just put it over here... $7/346, 459, 197, 426/...Why would you give this to me? Do you need me to put it in the trash? $s/456, 211, 557, 569/Thank you, I could use one of these right now. $k// "
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/animationDescriptions",
+      "Entries": {
+        "Custom_ZoeysNurseryZoeyGarden": "16 16 16 16 17 17 17 17 18 18/19 19 19 19 20 20 20 19 19 19 19 19 20 20 20 20/18 18 17 17 17 17 16 16 16 16",
+        "Custom_ZoeysNurseryZoeySing": "22/22 21 21 21 21 21 21 21 22 22 22 22 22 22/22",
+        "Custom_ZoeysNurseryZoeySleep": "50/50/50"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "Custom_ZoeysNurseryZoey0": "I can't believe I am about to be married!$h",
+        "Custom_ZoeysNurseryZoey1": "I hope I don't get cold feet"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Bouhm.NPCMapLocations/Locations",
+      "Entries": {
+        "Custom_ZoeysNurseryGrove": { // location name from step 2
+          "MapVectors": [
+            { "MapX": 23, "MapY": 365, "TileX": 0, "TileY": 0 }, // top-left map pixel from step 3
+            { "MapX": 40, "MapY": 438, "TileX": 60, "TileY": 32 } // bottom-right map pixel from step 3, and tile size from step 2
+          ],
+          "MapTooltip": {
+            "X": 23,
+            "Y": 365,
+            "Width": 17,
+            "Height": 73,
+            "PrimaryText": "Grove"
+          }
+        },
+        "Custom_ZoeysNurserySerenityGardens": { // location name from step 2
+          "MapVectors": [
+            { "MapX": 0, "MapY": 357, "TileX": 0, "TileY": 0 }, // top-left map pixel from step 3
+            { "MapX": 23, "MapY": 395, "TileX": 60, "TileY": 80 } // bottom-right map pixel from step 3, and tile size from step 2
+          ],
+          "MapTooltip": {
+            "X": 0,
+            "Y": 357,
+            "Width": 23,
+            "Height": 38,
+            "PrimaryText": "Serenity Gardens"
+          }
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Mods/Bouhm.NPCMapLocations/NPCs",
+      "Entries": {
+        "Custom_ZoeysNurseryZoey": {
+          "MarkerCropOffset": 4
+        }
+      }
     }
   ]
 }

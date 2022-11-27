@@ -12,6 +12,14 @@
     {
       "UniqueID": "mod.kitchen.minecartpatcher",
       "IsRequired": true
+    },
+    {
+      "UniqueID": "aedenthorn.ExtraMapLayers",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "sophie.LastingCTs",
+      "IsRequired": true
     }
   ]
 }
