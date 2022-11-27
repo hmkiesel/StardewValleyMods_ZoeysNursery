@@ -1,0 +1,18 @@
+﻿{
+  "Name": "[STF] Zoey's Nursery",
+  "Author": "hmkiesel",
+  "Version": "1.0.0",
+  "Description": "Adds new plant shop",
+  "UniqueID": "hmkiesel.STF_ZoeysNursery",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Cherry.ShopTileFramework"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "hmkiesel.CP_ZoeysNursery",
+      "IsRequired": true
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "Format": "1.27.0",
+  "RemovePacksFromVanilla": ["hmkiesel.JA_PerennialFlowers", "hmkiesel.JA_BushesAndShrubs", "hmkiesel.HannahsFences"],
+  "RemovePackRecipesFromVanilla": ["hmkiesel.HannahsFences"],
+  "Shops": [
+    {
+      "ShopName": "hmkiesel_ZoeysNurseryPlantShop",
+      "CategoriesToSellHere": [ -19, -74, -80 ],
+      "PortraitPath": "assets/Zoey_Portrait_Shop.png",
+      "Quote": "Welcome! I've got a variety of gardening supplies and plants in stock today.",
+      "DefaultSellPriceMultiplier": 1.25,
+      "When": [
+        "d Thu Fri/t 900 1810",
+        "!d Fri/t 900 1510"
+      ],
+      "ClosedMessage": "Zoey's not here right now",
+      "ItemStocks": [
+        { // vanilla seeds (all seasons)
+          "ItemType": "Object",
+          "ItemIDs": [ 770, 885, 929 ],
+          "MaxNumItemsSoldInItemStock": 1
+        },
+        { // vanilla seeds (spring)
+          "ItemType": "Object",
+          "ItemIDs": [ 427, 429, 495 ],
+          "MaxNumItemsSoldInItemStock": 1,
+          "When": [ "!z spring" ]
+        },
+        { // vanilla seeds (summer)
+          "ItemType": "Object",
+          "ItemIDs": [ 431, 453, 455, 496 ],
+          "MaxNumItemsSoldInItemStock": 1,
+          "When": [ "!z summer" ]
+        },
+        { // vanilla seeds (fall)
+          "ItemType": "Object",
+          "ItemIDs": [ 425, 431, 497 ],
+          "MaxNumItemsSoldInItemStock": 1,
+          "When": [ "!z fall" ]
+        },
+        { // vanilla seeds (winter)
+          "ItemType": "Object",
+          "ItemIDs": [ 498 ],
+          "MaxNumItemsSoldInItemStock": 1,
+          "When": [ "!z winter" ]
+        },
+        {
+          "ItemType": "Seed",
+          "JAPacks": [ "hmkiesel.JA_PerennialFlowers", "hmkiesel.JA_BushesAndShrubs" ],
+          "FilterSeedsBySeason": true,
+          "MaxNumItemsSoldInItemStock": 4
+        },
+        { // vanilla starters (grass, tea, fruit trees)
+          "ItemType": "Object",
+          "ItemIDs": [ 251, 297, 628, 629, 630, 631, 632, 633 ],
+          "FilterSeedsBySeason": true,
+          "MaxNumItemsSoldInItemStock": 2
+        },
+        { // vanilla flowers
+          "ItemType": "Object",
+          "ItemIDs": [ 376, 421, 591, 593, 595, 597 ],
+          "MaxNumItemsSoldInItemStock": 2
+        },
+        { // basic fertilizer & retaining soil
+          "ItemType": "Object",
+          "ItemIDs": [ 370, 368, 465 ]
+        },
+        { // only year 2+ (quality fertilizer & retaining soil)
+          "ItemType": "Object",
+          "ItemIDs": [ 371, 369, 466 ],
+          "When": [ "y 2" ]
+        },
+        { // vanilla misc
+          "ItemType": "Object",
+          "ItemIDs": [ 461, 599 ],
+          "MaxNumItemsSoldInItemStock": 1,
+          "Stock": 2
+        },
+        {
+          "ItemType": "Furniture",
+          "ItemIDs": [
+            1363,
+            1362,
+            1369,
+            1385,
+            1384,
+            1383,
+            1382,
+            1381,
+            1380,
+            1379,
+            1378,
+            1377,
+            1376,
+            1819,
+            1818,
+            1817,
+            1390,
+            1389,
+            1388,
+            1387,
+            1386,
+            1952,
+            1297,
+            1602,
+            984,
+            985,
+            986,
+            989,
+            1606,
+            1848,
+            2814,
+            1971,
+            1748,
+            1747,
+            1755,
+            2742,
+            1307,
+            1440
+          ],
+          "MaxNumItemsSoldInItemStock": 4
+        },
+        {
+          "ItemType": "BigCraftable",
+          "ItemIDs": [
+            192,
+            196,
+            118,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            128,
+            123,
+            125,
+            35,
+            46,
+            48,
+            52,
+            53,
+            54,
+            55,
+            56,
+            200,
+            204,
+            60,
+            70,
+            184,
+            188,
+            208
+          ],
+          "MaxNumItemsSoldInItemStock": 2
+        }
+      ]
+    }
+  ]
+}
