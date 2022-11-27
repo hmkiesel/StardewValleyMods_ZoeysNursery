@@ -81,7 +81,7 @@
       "Action": "EditData",
       "Target": "Data/NPCDispositions",
       "Entries": {
-        "Custom_ZoeysNurseryZoey": "adult/polite/neutral/positive/female/datable//Custom_ZoeysNurserySerenityGardens/fall 8//Custom_ZoeysNurserySerenityGardens 45 20/Zoey"
+        "Custom_ZoeysNurseryZoey": "adult/polite/neutral/positive/female/datable//Custom_ZoeysNurseryZoeyHouse/fall 8//Custom_ZoeysNurseryZoeyHouse 3 6/Zoey"
       }
     },
     {
