@@ -114,8 +114,18 @@
       "Entries": {
         "Custom_ZoeysNurseryGrove": { // location name from step 2
           "MapVectors": [
-            { "MapX": 23, "MapY": 365, "TileX": 0, "TileY": 0 }, // top-left map pixel from step 3
-            { "MapX": 40, "MapY": 438, "TileX": 60, "TileY": 32 } // bottom-right map pixel from step 3, and tile size from step 2
+            {
+              "MapX": 23,
+              "MapY": 365,
+              "TileX": 0,
+              "TileY": 0
+            }, // top-left map pixel from step 3
+            {
+              "MapX": 40,
+              "MapY": 438,
+              "TileX": 60,
+              "TileY": 32
+            } // bottom-right map pixel from step 3, and tile size from step 2
           ],
           "MapTooltip": {
             "X": 23,
@@ -127,8 +137,18 @@
         },
         "Custom_ZoeysNurserySerenityGardens": { // location name from step 2
           "MapVectors": [
-            { "MapX": 0, "MapY": 357, "TileX": 0, "TileY": 0 }, // top-left map pixel
-            { "MapX": 23, "MapY": 395, "TileX": 60, "TileY": 80 } // bottom-right map pixel
+            {
+              "MapX": 0,
+              "MapY": 357,
+              "TileX": 0,
+              "TileY": 0
+            }, // top-left map pixel
+            {
+              "MapX": 23,
+              "MapY": 395,
+              "TileX": 60,
+              "TileY": 80
+            } // bottom-right map pixel
           ],
           "MapTooltip": {
             "X": 0,
@@ -147,6 +167,14 @@
         "Custom_ZoeysNurseryZoey": {
           "MarkerCropOffset": 4
         }
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Custom_ZoeysNurseryPlantShop",
+      "FromFile": "assets/ZoeysNursery_PlantShop_rainy.tmx",
+      "When": {
+        "Weather": "rain, storm"
       }
     }
   ]

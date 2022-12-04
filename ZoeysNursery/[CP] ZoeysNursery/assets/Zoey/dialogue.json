@@ -76,7 +76,7 @@
   "fall_Sun10": "I feel so comfortable with you, @.$h#$b#Do you feel that way too?$l",
   "winter_Fri6": "Hi, @... It's hard for me to say this... but I want you to know that I was really lonely before I met you.#$q 24/25/26 winter_Fri_old#Do you ever think about moving back to the city?#$r 24 20 winter_Fri_24#I was miserable living in the city, I would never go back.#$r 24 40 summer_Fri_24#Of course not, I don't ever want to live so far away from you.#$r 25 -20 winter_Fri_25#Maybe someday... It's been hard leaving my family and old friends behind.#$r 26 -40 winter_Fri_26#Oh definitely, I plan to move back soon. I really hate it here.",
   "winter_Fri_old": "$p 21#But as long as you're around, I don't think I'll ever feel lonely again.$l|And I'm really going to miss you when you're gone...$s",
-  "winter_Fri_24": "I guess I have nothing to worry about then...$l#$b#B-blushing?? No-no, I'm not blushing...$9#$b#I just think that we are going to be friends for a long time.$h",
+  "winter_Fri_24": "I guess I have nothing to worry about then...$l#$b#B-blushing?? No, I'm not blushing...$9#$b#I just think that we are going to be friends for a long time.$h",
   "winter_Fri_25": "Oh... But you've made new friends here, right? I would be so sad if you left...$s",
   "winter_Fri_26": "...Wait, what???$s#$e#%Zoey is trying to hide her tears",
   "winter_Mon": "Brrrrr it's cold! I need some hot cocoa.",

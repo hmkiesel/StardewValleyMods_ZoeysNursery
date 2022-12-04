@@ -17,7 +17,7 @@
       "ItemStocks": [
         { // vanilla seeds (all seasons)
           "ItemType": "Object",
-          "ItemIDs": [ 770, 885, 929 ],
+          "ItemIDs": [ 770, 885 ],
           "MaxNumItemsSoldInItemStock": 1
         },
         { // vanilla seeds (spring)
