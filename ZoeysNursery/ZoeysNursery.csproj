@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Remove="Pathoschild.Stardew.ModBuildConfig" />
     <None Remove="ICSharpCode.Decompiler" />
+    <None Remove="[CP] ZoeysNursery\assets\blank.json" />
     <None Remove="[CP] ZoeysNursery\manifest.json" />
     <None Remove="[CP] ZoeysNursery\content.json" />
     <None Remove="[CP] ZoeysNursery\assets\fall_extrasTileSheet.png" />
