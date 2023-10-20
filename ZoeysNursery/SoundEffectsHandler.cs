@@ -4,7 +4,6 @@ using StardewValley;
 using System.IO;
 using StardewModdingAPI;
 using Microsoft.Xna.Framework;
-using StardewModdingAPI.Events;
 using System.Collections.Generic;
 
 namespace ZoeysNursery
@@ -24,7 +23,7 @@ namespace ZoeysNursery
         {
             this.helper = helper;
             this.monitor = monitor;
-            this.waterfallCue = createWaterfallCue();
+            waterfallCue = createWaterfallCue();
         }
 
         /// <summary>
@@ -107,7 +106,7 @@ namespace ZoeysNursery
             SoundEffect waterfallAudio;
             string filePathCombined = Path.Combine(helper.DirectoryPath, "assets", "waterfall.wav");
 
-            using (var stream = new System.IO.FileStream(filePathCombined, System.IO.FileMode.Open))
+            using (var stream = new FileStream(filePathCombined, FileMode.Open))
             {
                 waterfallAudio = SoundEffect.FromStream(stream);
             }
