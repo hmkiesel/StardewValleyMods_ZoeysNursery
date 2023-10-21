@@ -2466,7 +2466,7 @@
   </object>
   <object id="17" name="TileData" x="720" y="304" width="16" height="16">
    <properties>
-    <property name="Action" value="LockedDoorWarp 5 14 Custom_ZoeysNurseryZoeyHouse 900 2100 Custom_ZoeysNurseryZoey 500"/>
+    <property name="Action" value="LockedDoorWarp 5 14 Custom_ZoeysNurseryZoeyHouse 900 2100 CustomZoeysNurseryZoey 500"/>
    </properties>
   </object>
  </objectgroup>

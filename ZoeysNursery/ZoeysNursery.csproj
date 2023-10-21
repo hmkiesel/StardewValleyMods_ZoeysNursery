@@ -107,8 +107,6 @@
     <Content Include="[CP] ZoeysNursery\assets\ZoeysNursery_PlantShopTiles.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Remove="[CP] ZoeysNursery\assets\fall_ZoeysNursery_Greenhouse.png~" />
-    <Content Remove="[CP] ZoeysNursery\assets\fall_ZoeysNursery_Greenhouse.png.kra" />
   </ItemGroup>
   <ItemGroup>
     <None Update="[CP] ZoeysNursery\assets\fall_zoeysNursery_minecarts.png">

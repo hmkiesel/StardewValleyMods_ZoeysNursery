@@ -58,41 +58,41 @@
     // Zoey NPC
     {
       "Action": "Load",
-      "Target": "Characters/Custom_ZoeysNurseryZoey",
+      "Target": "Characters/CustomZoeysNurseryZoey",
       "FromFile": "assets/Zoey/sprites.png"
     },
     {
       "Action": "Load",
-      "Target": "Portraits/Custom_ZoeysNurseryZoey",
+      "Target": "Portraits/CustomZoeysNurseryZoey",
       "FromFile": "assets/Zoey/portraits.png"
     },
     {
       "Action": "Load",
-      "Target": "Characters/Dialogue/Custom_ZoeysNurseryZoey",
+      "Target": "Characters/Dialogue/CustomZoeysNurseryZoey",
       "FromFile": "assets/Zoey/dialogue.json"
     },
     {
       "Action": "Load",
-      "Target": "Characters/Dialogue/MarriageDialogueCustom_ZoeysNurseryZoey",
+      "Target": "Characters/Dialogue/MarriageDialogueCustomZoeysNurseryZoey",
       "FromFile": "assets/Zoey/marriageDialogue.json"
     },
     {
       "Action": "Load",
-      "Target": "Characters/schedules/Custom_ZoeysNurseryZoey",
+      "Target": "Characters/schedules/CustomZoeysNurseryZoey",
       "FromFile": "assets/Zoey/schedule.json"
     },
     {
       "Action": "EditData",
       "Target": "Data/NPCDispositions",
       "Entries": {
-        "Custom_ZoeysNurseryZoey": "adult/polite/neutral/positive/female/datable//Custom_ZoeysNurseryZoeyHouse/fall 8//Custom_ZoeysNurseryZoeyHouse 3 6/Zoey"
+        "CustomZoeysNurseryZoey": "adult/polite/neutral/positive/female/datable//Custom_ZoeysNurseryZoeyHouse/fall 8//Custom_ZoeysNurseryZoeyHouse 3 6/Zoey"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/NPCGiftTastes",
       "Entries": {
-        "Custom_ZoeysNurseryZoey": "@, this is my favorite! How did you find one? $h/70, 232, 228, 402, 421, 591, 376/This is an incredible gift! $h/22, 18, 106, 283, 372, -80/Oh, is this for me? I'll just put it over here... $7/346, 459, 197, 426/...Why would you give this to me? Do you need me to put it in the trash? $s/456, 211, 557, 569/Thank you, I could use one of these right now. $k// "
+        "CustomZoeysNurseryZoey": "@, this is my favorite! How did you find one? $h/70, 232, 228, 402, 421, 591, 376/This is an incredible gift! $h/22, 18, 106, 283, 372, -80/Oh, is this for me? I'll just put it over here... $7/346, 459, 197, 426/...Why would you give this to me? Do you need me to put it in the trash? $s/456, 211, 557, 569/Thank you, I could use one of these right now. $k// "
       }
     },
     {
@@ -108,8 +108,8 @@
       "Action": "EditData",
       "Target": "Data/EngagementDialogue",
       "Entries": {
-        "Custom_ZoeysNurseryZoey0": "I can't believe I am about to be married!$h",
-        "Custom_ZoeysNurseryZoey1": "I hope I don't get cold feet"
+        "CustomZoeysNurseryZoey0": "I can't believe I am about to be married!$h",
+        "CustomZoeysNurseryZoey1": "I hope I don't get cold feet"
       }
     },
     {
@@ -168,7 +168,7 @@
       "Action": "EditData",
       "Target": "Mods/Bouhm.NPCMapLocations/NPCs",
       "Entries": {
-        "Custom_ZoeysNurseryZoey": {
+        "CustomZoeysNurseryZoey": {
           "MarkerCropOffset": 4
         }
       }
@@ -191,30 +191,53 @@
       "Action": "EditData",
       "Target": "Data/mail",
       "Entries": {
-        "Custom_ZoeysNurseryZoeySupportCareer": "Hello @,^Thanks so much for coming to visit me yesterday, and for being there for me. You don't know how much it means to me. I hope to see you again soon.^   -Your friend, Zoey"
+        "CustomZoeysNurseryZoeySupportCareer": "Hello @,^Thanks so much for coming to visit me yesterday, and for being there for me. You don't know how much it means to me. I hope to see you again soon.^   -Your friend, Zoey"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/Events/Custom_ZoeysNurseryZoeyHouse",
       "Entries": {
-        "1111/f Custom_ZoeysNurseryZoey 500/t 700 1800": "sadpiano/-1000 -1000/farmer 15 14 0 Custom_ZoeysNurseryZoey 15 6 0/showFrame Custom_ZoeysNurseryZoey 23/changeMapTile Front 15 4 1453/viewport 15 9/move farmer 0 -2 0/speak Custom_ZoeysNurseryZoey \"Mom... Why do you always have to compare me to Ella? Why can't you consider my happiness?$11#$b#I don't ask for anything from you... Just that you accept me for who I am.$11#$b#*beep beep beep*...Mom?.. Did you hang up on me??.. *click*$11\"/faceDirection Custom_ZoeysNurseryZoey 0/changeMapTile Front 15 4 1454/pause 300/emote Custom_ZoeysNurseryZoey 12/pause 1000/emote farmer 8/pause 300/move Custom_ZoeysNurseryZoey 0 1 2/speak Custom_ZoeysNurseryZoey \"Oh... Hello, @.$10\"/pause 300/emote Custom_ZoeysNurseryZoey 28/move Custom_ZoeysNurseryZoey -3 0 3/move Custom_ZoeysNurseryZoey 0 2 2/move Custom_ZoeysNurseryZoey 1 0 1/move farmer 0 -3 3/speak Custom_ZoeysNurseryZoey \"I guess you overheard.$s\"/quickQuestion #Are you okay?#Who were you talking to?(break)speak Custom_ZoeysNurseryZoey \"*sigh* I've been better. That was my Mom on the phone.$s\"(break)speak Custom_ZoeysNurseryZoey \"My Mom... We aren't on very good terms.$s\"/speak Custom_ZoeysNurseryZoey \"My parents have never been proud of me. Growing up, they always compared me to my sister, Ella.$s#$b#She was more successful and got better grades, so my parents always praised her and asked me why I wasn't more like her.$7#$b#I used to try so hard to make them proud. I even went to Law school like they wanted, even though I hated it.$s#$b#I finally dropped out after 3 years of making myself miserable trying to be somebody that I'm not.$s#$b#I moved here and started pursuing my dream of owning a nursery and living in the countryside.#$b#My parents have never supported my decision. My Mom calls me once a week to tell me she's dissapointed in me, and that I should get a 'real' job.$s#$b#Sometimes I wonder if she's right... It's not easy making a living this way. I thought about giving up many times.$7#$b#But I can't imagine doing anything else... Do you think I made the right decision?\"/question fork1 \"#Yes, you should do what makes you happy. Don't let other people dictate your life.#Your parents are right, you should get a real job.\"/fork 1111getarealjob/speak Custom_ZoeysNurseryZoey \"Thank you, @. I really needed to hear that.#$b#I'm glad that I opened up to you about this. Thanks for being such a supportive friend.$h\"/pause 600/move farmer 0 3 2 true/globalFade/viewport -1000 -1000/mail Custom_ZoeysNurseryZoeySupportCareer/end dialogueWarpOut Custom_ZoeysNurseryZoey \"Thanks so much for being supportive, @.\"",
-        "1111getarealjob": "speak Custom_ZoeysNurseryZoey \"Oh... I really didn't think you would take my Mom's side on this.$s\"pause 100/end dialogueWarpOut Custom_ZoeysNurseryZoey \"...$a\""
+        "1111/f CustomZoeysNurseryZoey 500/t 700 1800": "sadpiano/-1000 -1000/farmer 15 14 0 CustomZoeysNurseryZoey 15 6 0/showFrame CustomZoeysNurseryZoey 23/changeMapTile Front 15 4 1453/viewport 15 9/move farmer 0 -2 0/speak CustomZoeysNurseryZoey \"Mom... Why do you always have to compare me to Ella? Why can't you consider my happiness?$11#$b#I don't ask for anything from you... Just that you accept me for who I am.$11#$b#*beep beep beep*...Mom?.. Did you hang up on me??.. *click*$11\"/faceDirection CustomZoeysNurseryZoey 0/changeMapTile Front 15 4 1454/pause 300/emote CustomZoeysNurseryZoey 12/pause 1000/emote farmer 8/pause 300/move CustomZoeysNurseryZoey 0 1 2/speak CustomZoeysNurseryZoey \"Oh... Hello, @.$10\"/pause 300/emote CustomZoeysNurseryZoey 28/move CustomZoeysNurseryZoey -3 0 3/move CustomZoeysNurseryZoey 0 2 2/move CustomZoeysNurseryZoey 1 0 1/move farmer 0 -3 3/speak CustomZoeysNurseryZoey \"I guess you overheard.$s\"/quickQuestion #Are you okay?#Who were you talking to?(break)speak CustomZoeysNurseryZoey \"*sigh* I've been better. That was my Mom on the phone.$s\"(break)speak CustomZoeysNurseryZoey \"My Mom... We aren't on very good terms.$s\"/speak CustomZoeysNurseryZoey \"My parents have never been proud of me. Growing up, they always compared me to my sister, Ella.$s#$b#She was more successful and got better grades, so my parents always praised her and asked me why I wasn't more like her.$7#$b#I used to try so hard to make them proud. I even went to Law school like they wanted, even though I hated it.$s#$b#I finally dropped out after 3 years of making myself miserable trying to be somebody that I'm not.$s#$b#I moved here and started pursuing my dream of owning a nursery and living in the countryside.#$b#My parents have never supported my decision. My Mom calls me once a week to tell me she's dissapointed in me, and that I should get a 'real' job.$s#$b#Sometimes I wonder if she's right... It's not easy making a living this way. I thought about giving up many times.$7#$b#But I can't imagine doing anything else... Do you think I made the right decision?\"/question fork1 \"#Yes, you should do what makes you happy. Don't let other people dictate your life.#Your parents are right, you should get a real job.\"/fork 1111getarealjob/speak CustomZoeysNurseryZoey \"Thank you, @. I really needed to hear that.#$b#I'm glad that I opened up to you about this. Thanks for being such a supportive friend.$h\"/pause 600/move farmer 0 3 2 true/globalFade/viewport -1000 -1000/mail CustomZoeysNurseryZoeySupportCareer/end dialogueWarpOut CustomZoeysNurseryZoey \"Thanks so much for being supportive, @.\"",
+        "1111getarealjob": "speak CustomZoeysNurseryZoey \"Oh... I really didn't think you would take my Mom's side on this.$s\"pause 100/end dialogueWarpOut CustomZoeysNurseryZoey \"...$a\""
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/Events/BusStop",
       "Entries": {
-        "1111busstopzoey/f Custom_ZoeysNurseryZoey 1000/t 600 1200": "none/-1000 -1000/farmer 13 22 0 Custom_ZoeysNurseryZoey 14 10 2/viewport 12 11 clamp true/skippable/move farmer 0 -10 0 true/proceedPosition farmer/move farmer 1 0 0 false/speak Custom_ZoeysNurseryZoey \"Hey @! I'm so glad you decided to join me today.\"/faceDirection Custom_ZoeysNurseryZoey 3/pause 400/faceDirection Custom_ZoeysNurseryZoey 2/speak Custom_ZoeysNurseryZoey \"Well, we'd better get going.\"/pause 600/move Custom_ZoeysNurseryZoey -2 0 0/move Custom_ZoeysNurseryZoey 0 -3 0 true/move farmer -2 0 0 true/move farmer 0 -4 0 true/globalFade/viewport -1000 -1000/pause 4000/playSound busDoorOpen/pause 3000/speak Custom_ZoeysNurseryZoey \"Okay, we've arrived!$h\"/pause 800/changeToTemporaryMap Custom_ZoeysNurseryZuzuSeedShop/viewport -1000 -1000/addTemporaryActor Pierre 16 32 16 6 2/warp Custom_ZoeysNurseryZoey 16 12/faceDirection Custom_ZoeysNurseryZoey 0 true/warp farmer 16 13/viewport 9 9 true/move Custom_ZoeysNurseryZoey 0 -4 0/move farmer 0 -3 0/move farmer 1 0 0/move farmer 0 -1 0/pause 3000/speak Custom_ZoeysNurseryZoey \"Hello, I'm here to pick up my order.\"/speak Pierre \"Name?\"/speak Custom_ZoeysNurseryZoey \"Zoey.\"/faceDirection Pierre 1/faceDirection Pierre 0/pause 800/faceDirection Pierre 1/faceDirection Pierre 2/speak Pierre \"That'll be 2450g\"/move Custom_ZoeysNurseryZoey 1 0 0/pause 1000/speak Custom_ZoeysNurseryZoey \"...\"/pause 800/speak Custom_ZoeysNurseryZoey \"Excuse me, but this order is wrong. Where are my sunflower seeds?\"/speak Pierre \"Sunflower seeds are in aisle 3.\"/speak Custom_ZoeysNurseryZoey \"...Are you really going to make me find them myself??$a#$b#I'm a loyal customer, I order the same seeds every week, but you still can't get it right.$a\"/speak Pierre \"Look lady, I don't have time for this.$a#$b#If you want the seeds, you can go get them yourself.$a\"/question fork1 \"#Hey! Don't you dare talk to my friend like that. If you can't offer us decent service, then we're never going to shop here again!#Zoey, it's okay. Stay here, I'll go grab the seeds.\"/fork 1111grabtheseeds/speak Pierre \"Uh...#$b#My apologies. I'll go get those seeds for you.\"/move Pierre -8 0 0/pause 1500/move Pierre 8 0 2/pause 800/speak Pierre \"Here you go. Thanks for shopping at Seeds and More.\"/faceDirection Custom_ZoeysNurseryZoey 2/pause 800/speak Custom_ZoeysNurseryZoey \"Let's go, @. I want to take you to my favorite ice cream shop.$h\"/pause 600/move farmer 0 1 2/move farmer 0 4 2 true/move Custom_ZoeysNurseryZoey 0 5 2 true/globalFade/viewport -1000 -1000/end dialogue Custom_ZoeysNurseryZoey \"Thanks for coming with me today, @.\""
+        "1111busstopzoey/f CustomZoeysNurseryZoey 1000/t 600 1200": "none/-1000 -1000/farmer 13 22 0 CustomZoeysNurseryZoey 14 10 2/viewport 12 11 clamp true/skippable/move farmer 0 -10 0 true/proceedPosition farmer/move farmer 1 0 0 false/speak CustomZoeysNurseryZoey \"Hey @! I'm so glad you decided to join me today.\"/faceDirection CustomZoeysNurseryZoey 3/pause 400/faceDirection CustomZoeysNurseryZoey 2/speak CustomZoeysNurseryZoey \"Well, we'd better get going.\"/pause 600/move CustomZoeysNurseryZoey -2 0 0/move CustomZoeysNurseryZoey 0 -3 0 true/move farmer -2 0 0 true/move farmer 0 -4 0 true/globalFade/viewport -1000 -1000/pause 4000/playSound busDoorOpen/pause 3000/speak CustomZoeysNurseryZoey \"Okay, we've arrived!$h\"/pause 800/changeToTemporaryMap Custom_ZoeysNurseryZuzuSeedShop/viewport -1000 -1000/addTemporaryActor Pierre 16 32 16 6 2/warp CustomZoeysNurseryZoey 16 12/faceDirection CustomZoeysNurseryZoey 0 true/warp farmer 16 13/viewport 9 9 true/move CustomZoeysNurseryZoey 0 -4 0/move farmer 0 -3 0/move farmer 1 0 0/move farmer 0 -1 0/pause 3000/speak CustomZoeysNurseryZoey \"Hello, I'm here to pick up my order.\"/speak Pierre \"Name?\"/speak CustomZoeysNurseryZoey \"Zoey.\"/faceDirection Pierre 1/faceDirection Pierre 0/pause 800/faceDirection Pierre 1/faceDirection Pierre 2/speak Pierre \"That'll be 2450g\"/move CustomZoeysNurseryZoey 1 0 0/pause 1000/speak CustomZoeysNurseryZoey \"...\"/pause 800/speak CustomZoeysNurseryZoey \"Excuse me, but this order is wrong. Where are my sunflower seeds?\"/speak Pierre \"Sunflower seeds are in aisle 3.\"/speak CustomZoeysNurseryZoey \"...Are you really going to make me find them myself??$a#$b#I'm a loyal customer, I order the same seeds every week, but you still can't get it right.$a\"/speak Pierre \"Look lady, I don't have time for this.$a#$b#If you want the seeds, you can go get them yourself.$a\"/question fork1 \"#Hey! Don't you dare talk to my friend like that. If you can't offer us decent service, then we're never going to shop here again!#Zoey, it's okay. Stay here, I'll go grab the seeds.\"/fork 1111grabtheseeds/speak Pierre \"Uh...#$b#My apologies. I'll go get those seeds for you.\"/move Pierre -8 0 0/pause 1500/move Pierre 8 0 2/pause 800/speak Pierre \"Here you go. Thanks for shopping at Seeds and More.\"/faceDirection CustomZoeysNurseryZoey 2/pause 800/speak CustomZoeysNurseryZoey \"Let's go, @. I want to take you to my favorite ice cream shop.$h\"/pause 600/move farmer 0 1 2/move farmer 0 4 2 true/move CustomZoeysNurseryZoey 0 5 2 true/globalFade/viewport -1000 -1000/end dialogue CustomZoeysNurseryZoey \"Thanks for coming with me today, @.\""
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/Events/Temp",
       "Entries": {
-        "1111grabtheseeds": "move farmer -2 0 0/move farmer 0 -1 0/move farmer -4 0 0/move farmer 0 -2 0/move farmer -4 0 0/pause 1500/move farmer 4 0 2/move farmer 0 2 0/move farmer 5 0 1/faceDirection Custom_ZoeysNurseryZoey 3/pause 800/speak Custom_ZoeysNurseryZoey \"Thanks, @.$h\"/faceDirection Custom_ZoeysNurseryZoey 0/pause 800/speak Pierre \"Here's your receipt. Thanks for shopping at Seeds and More.\"/faceDirection Custom_ZoeysNurseryZoey 3/pause 800/speak Custom_ZoeysNurseryZoey \"Let's go, @. I want to take you to my favorite ice cream shop.$h\"/pause 600/move farmer 0 5 2 true/move Custom_ZoeysNurseryZoey 0 5 2 true/globalFade/viewport -1000 -1000/end dialogue Custom_ZoeysNurseryZoey \"Thanks for coming with me today, @.\""
+        "1111grabtheseeds": "move farmer -2 0 0/move farmer 0 -1 0/move farmer -4 0 0/move farmer 0 -2 0/move farmer -4 0 0/pause 1500/move farmer 4 0 2/move farmer 0 2 0/move farmer 5 0 1/faceDirection CustomZoeysNurseryZoey 3/pause 800/speak CustomZoeysNurseryZoey \"Thanks, @.$h\"/faceDirection CustomZoeysNurseryZoey 0/pause 800/speak Pierre \"Here's your receipt. Thanks for shopping at Seeds and More.\"/faceDirection CustomZoeysNurseryZoey 3/pause 800/speak CustomZoeysNurseryZoey \"Let's go, @. I want to take you to my favorite ice cream shop.$h\"/pause 600/move farmer 0 5 2 true/move CustomZoeysNurseryZoey 0 5 2 true/globalFade/viewport -1000 -1000/end dialogue CustomZoeysNurseryZoey \"Thanks for coming with me today, @.\""
       }
+    },
+    //Festivals
+    {
+      "LogName": "Flower Dance Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "I contributed the prettiest flowers in my garden for the floral arrangements.$12#$b#I've been looking forward to this festival for months!$12"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 23 31 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 23 31 left",
+          "Delimiter": "/"
+        }
+      ]
     }
   ]
 }
