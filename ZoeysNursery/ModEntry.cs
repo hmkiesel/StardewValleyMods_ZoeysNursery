@@ -1,21 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Xml.Linq;
-using System.Linq;
-using HarmonyLib;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Netcode;
-using StardewModdingAPI;
+﻿using StardewModdingAPI;
 using StardewModdingAPI.Events;
-using StardewValley;
-using StardewValley.BellsAndWhistles;
-using StardewValley.Network;
-using StardewValley.TerrainFeatures;
-using xTile.Dimensions;
-using xTile.ObjectModel;
-using xTile.Tiles;
 
 namespace ZoeysNursery
 {
@@ -23,7 +7,6 @@ namespace ZoeysNursery
     public class ModEntry : Mod
     {
         private static IMonitor monitor;
-        private static List<Vector2> waterfallPositions = new List<Vector2>();
 
         private SoundEffectsHandler soundEffectsHandler;
         private LocationHandler locationHandler;
