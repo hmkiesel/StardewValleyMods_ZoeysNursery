@@ -26,8 +26,10 @@ namespace ZoeysNursery
         }
 
         /// <summary>
-        /// updates the volume of the sound effect based on the distance between the player and the closest sound effect source tile.
+        /// updates the volume of the sound effect based on the distance between the player and the closest sound effect source.
         /// </summary>
+        /// <param name="soundEffectPositionsByLocation">dictionary mapping location names to a list of sound effect positions</param>
+        /// <param name="soundEffectName">name of the sound effect cue</param>
         public void update(Dictionary<String, List<Vector2>> soundEffectPositionsByLocation, String soundEffectName)
         {
             if (!soundEffectCuesByName.TryGetValue(soundEffectName, out ICue soundEffectCue))
@@ -70,18 +72,15 @@ namespace ZoeysNursery
                 }
             }
 
-            if (volumeOverrideForLocChange >= 0f)
+            if (volumeOverrideForLocChange >= 0f && soundEffectCue != null)
             {
-                if (shortestDistanceForCue <= (float)farthestSoundDistance)
+                if (shortestDistanceForCue <= farthestSoundDistance)
                 {
-                    float volumeOverride = Math.Min(volumeOverrideForLocChange, Math.Min(1f, 1f - shortestDistanceForCue / (float)farthestSoundDistance));
-                    if (soundEffectCue != null)
-                    {
-                        soundEffectCue.Volume = volumeOverride * 100f * Math.Min(Game1.ambientPlayerVolume, Game1.options.ambientVolumeLevel);
-                        soundEffectCue.Resume();
-                    }
+                    float volumeOverride = Math.Min(volumeOverrideForLocChange, Math.Min(1f, 1f - shortestDistanceForCue /farthestSoundDistance));
+                    soundEffectCue.Volume = volumeOverride * 100f * Math.Min(Game1.ambientPlayerVolume, Game1.options.ambientVolumeLevel);
+                    soundEffectCue.Resume();
                 }
-                else if (soundEffectCue != null)
+                else
                 {
                     soundEffectCue.Pause();
                 }
@@ -92,6 +91,8 @@ namespace ZoeysNursery
         /// <summary>
         /// creates a sound affect cue and adds it to the game's soundbank
         /// </summary>
+        /// <param name="soundEffectName">name for the sound effect cue</param>
+        /// <param name="soundEffectFileName">name of the audio file in assets/ directory</param>
         public void createCue(String soundEffectName, String soundEffectFileName)
         {
             if (soundEffectCuesByName.ContainsKey(soundEffectName))
@@ -122,7 +123,7 @@ namespace ZoeysNursery
             // Setting the sound effect to the new cue.
             cueDefinition.SetSound(soundEffectAudio, Game1.audioEngine.GetCategoryIndex("Ambient"), true);
 
-            // Adding the cue to the sound bank.
+            // Add the cue to the sound bank.
             Game1.soundBank.AddCue(cueDefinition);
             ICue soundCue = Game1.soundBank.GetCue(soundEffectName);
 
