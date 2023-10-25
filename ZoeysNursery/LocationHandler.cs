@@ -12,6 +12,7 @@ namespace ZoeysNursery
     /// <summary> processes custom locations/maps </summary>
     public class LocationHandler
     {
+        private const String customPathLayer = "CustomPaths";
         private IMonitor monitor;
         public Dictionary<String, List<Vector2>> WaterfallPositionsByLocation { get; } = new Dictionary<string, List<Vector2>>();
 
@@ -30,19 +31,19 @@ namespace ZoeysNursery
         {
             List<Vector2> waterfallPositions = new List<Vector2>();
             IEnumerable<GameLocation> filteredLocations = Game1.locations.Where(location =>
-                location != null && location.Name.Contains("ZoeysNursery") && location.Map.GetLayer("CustomPaths") != null
+                location != null && location.Name.Contains("ZoeysNursery") && location.Map.GetLayer(customPathLayer) != null
             );
 
             foreach (GameLocation location in filteredLocations)
             {
-                for (int x = 0; x < location.Map.GetLayer("CustomPaths").TileWidth; x++)
+                for (int x = 0; x < location.Map.GetLayer(customPathLayer).TileWidth; x++)
                 {
-                    for (int y = 0; y < location.Map.GetLayer("CustomPaths").TileHeight; y++)
+                    for (int y = 0; y < location.Map.GetLayer(customPathLayer).TileHeight; y++)
                     {
                         Vector2 tilePosition = new Vector2(x, y);
 
                         // check if a fruit tree should spawn here
-                        string treeSpawn = location.doesTileHaveProperty(x, y, "spawnTree", "CustomPaths");
+                        string treeSpawn = location.doesTileHaveProperty(x, y, "spawnTree", customPathLayer);
                         if (treeSpawn != null && location.GetFurnitureAt(tilePosition) == null && !location.terrainFeatures.ContainsKey(tilePosition) && !location.objects.ContainsKey(tilePosition))
                         {
                             // spawn tree at this tile
@@ -82,7 +83,7 @@ namespace ZoeysNursery
                         }
 
                         // check if a waterfall is here
-                        string localSound = location.doesTileHaveProperty(x, y, "localSound", "CustomPaths");
+                        string localSound = location.doesTileHaveProperty(x, y, "localSound", customPathLayer);
                         if (localSound != null && localSound == "zoeysNurseryWaterfall")
                         {
                             //TODO: make (dynamicWaterfallVolume) an optional config, if false, set location.localSound(localSound) instead
