@@ -13,7 +13,7 @@ namespace ZoeysNursery
     {
         private IModHelper helper;
         private IMonitor monitor;
-        private ICue waterfallCue;
+        private Dictionary<String, ICue> soundEffectCuesByName = new();
         private static float volumeOverrideForLocChange;
         private static float shortestDistanceForCue;
         private static int updateTimer = 100;
@@ -23,21 +23,25 @@ namespace ZoeysNursery
         {
             this.helper = helper;
             this.monitor = monitor;
-            waterfallCue = createWaterfallCue();
         }
 
         /// <summary>
-        /// updates the volume of the waterfall sound effect based on the distance between the player and the closest waterfall.
+        /// updates the volume of the sound effect based on the distance between the player and the closest sound effect source tile.
         /// </summary>
-        public void update(Dictionary<String, List<Vector2>> waterfallPositionsByLocation)
+        public void update(Dictionary<String, List<Vector2>> soundEffectPositionsByLocation, String soundEffectName)
         {
-            if (!Context.IsWorldReady || waterfallCue == null || !waterfallPositionsByLocation.ContainsKey(Game1.player.currentLocation.Name))
+            if (!soundEffectCuesByName.TryGetValue(soundEffectName, out ICue soundEffectCue))
             {
-                waterfallCue.Pause();
+                throw new ArgumentException($"invalid key - there is no sound effect cue available with name {soundEffectName}");
+            }
+
+            if (!Context.IsWorldReady || soundEffectCue == null || !soundEffectPositionsByLocation.ContainsKey(Game1.player.currentLocation.Name))
+            {
+                soundEffectCue.Pause();
                 return;
             }
 
-            List<Vector2> waterfallPositions = waterfallPositionsByLocation.GetValueOrDefault(Game1.player.currentLocation.Name, new List<Vector2>());
+            List<Vector2> soundEffectPositions = soundEffectPositionsByLocation.GetValueOrDefault(Game1.player.currentLocation.Name, new List<Vector2>());
 
             GameTime time = Game1.currentGameTime;
             int elapsedMillis = time.ElapsedGameTime.Milliseconds;
@@ -57,7 +61,7 @@ namespace ZoeysNursery
             shortestDistanceForCue = 9999999f;
             Vector2 standingPosition = Game1.player.getStandingPosition();
 
-            foreach (Vector2 position in waterfallPositions)
+            foreach (Vector2 position in soundEffectPositions)
             {
                 float distance = Vector2.Distance(position, standingPosition);
                 if (shortestDistanceForCue > distance)
@@ -71,58 +75,62 @@ namespace ZoeysNursery
                 if (shortestDistanceForCue <= (float)farthestSoundDistance)
                 {
                     float volumeOverride = Math.Min(volumeOverrideForLocChange, Math.Min(1f, 1f - shortestDistanceForCue / (float)farthestSoundDistance));
-                    if (waterfallCue != null)
+                    if (soundEffectCue != null)
                     {
-                        waterfallCue.Volume = volumeOverride * 100f * Math.Min(Game1.ambientPlayerVolume, Game1.options.ambientVolumeLevel);
-                        waterfallCue.Resume();
+                        soundEffectCue.Volume = volumeOverride * 100f * Math.Min(Game1.ambientPlayerVolume, Game1.options.ambientVolumeLevel);
+                        soundEffectCue.Resume();
                     }
                 }
-                else if (waterfallCue != null)
+                else if (soundEffectCue != null)
                 {
-                    waterfallCue.Pause();
+                    soundEffectCue.Pause();
                 }
             }
             updateTimer = 100;
         }
 
         /// <summary>
-        /// creates a waterfall sound affect cue and adds it to the game's soundbank
+        /// creates a sound affect cue and adds it to the game's soundbank
         /// </summary>
-        /// <returns>the generated cue</returns>
-        private ICue createWaterfallCue()
+        public void createCue(String soundEffectName, String soundEffectFileName)
         {
-            CueDefinition waterfallCueDefinition = new CueDefinition();
+            if (soundEffectCuesByName.ContainsKey(soundEffectName))
+            {
+                throw new ArgumentException($"duplicate key - there is already a sound effect with name {soundEffectName}");
+            }
+
+            CueDefinition cueDefinition = new CueDefinition();
 
             // Adding the name for the cue, which will be
             // the name of the audio to play when using sound functions.
-            waterfallCueDefinition.name = "zoeysNurseryWaterfall";
+            cueDefinition.name = soundEffectName;
 
             // If this sound is played multiple times in quick succession,
             // only one sound instance will play at a time.
-            waterfallCueDefinition.instanceLimit = 1;
-            waterfallCueDefinition.limitBehavior = CueDefinition.LimitBehavior.ReplaceOldest;
+            cueDefinition.instanceLimit = 1;
+            cueDefinition.limitBehavior = CueDefinition.LimitBehavior.ReplaceOldest;
 
             // Get the audio file and add it to a SoundEffect.
-            SoundEffect waterfallAudio;
-            string filePathCombined = Path.Combine(helper.DirectoryPath, "assets", "waterfall.wav");
+            SoundEffect soundEffectAudio;
+            string filePathCombined = Path.Combine(helper.DirectoryPath, "assets", soundEffectFileName);
 
             using (var stream = new FileStream(filePathCombined, FileMode.Open))
             {
-                waterfallAudio = SoundEffect.FromStream(stream);
+                soundEffectAudio = SoundEffect.FromStream(stream);
             }
 
             // Setting the sound effect to the new cue.
-            waterfallCueDefinition.SetSound(waterfallAudio, Game1.audioEngine.GetCategoryIndex("Ambient"), true);
+            cueDefinition.SetSound(soundEffectAudio, Game1.audioEngine.GetCategoryIndex("Ambient"), true);
 
             // Adding the cue to the sound bank.
-            Game1.soundBank.AddCue(waterfallCueDefinition);
-            ICue waterfallCue = Game1.soundBank.GetCue("zoeysNurseryWaterfall");
+            Game1.soundBank.AddCue(cueDefinition);
+            ICue soundCue = Game1.soundBank.GetCue(soundEffectName);
 
             // trigger play once, so that we can use 'resume' on this sound later
-            waterfallCue.Play();
-            waterfallCue.Pause();
+            soundCue.Play();
+            soundCue.Pause();
 
-            return waterfallCue;
+            soundEffectCuesByName.Add(soundEffectName, soundCue);
         }
     }
 }

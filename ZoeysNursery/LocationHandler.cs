@@ -87,7 +87,7 @@ namespace ZoeysNursery
                         if (localSound != null && localSound == "zoeysNurseryWaterfall")
                         {
                             //TODO: make (dynamicWaterfallVolume) an optional config, if false, set location.localSound(localSound) instead
-                            waterfallPositions.Add(tilePosition);
+                            waterfallPositions.Add(tilePosition * 64f);
                         }
                     }
                 }

@@ -11,6 +11,8 @@ namespace ZoeysNursery
 
         private SoundEffectsHandler soundEffectsHandler;
         private LocationHandler locationHandler;
+        private const string waterfallSoundFileName = "waterfall.wav";
+        private const string waterfallSoundEffectName = "zoeysNurseryWaterfall";
 
         /********* Public methods *********/
         /// <summary>The mod entry point, called after the mod is first loaded.</summary>
@@ -20,6 +22,8 @@ namespace ZoeysNursery
             monitor = this.Monitor;
             soundEffectsHandler = new SoundEffectsHandler(helper, monitor);
             locationHandler = new LocationHandler(monitor);
+
+            soundEffectsHandler.createCue(waterfallSoundEffectName, waterfallSoundFileName);
 
 
             helper.Events.GameLoop.GameLaunched += this.onGameLaunched;
@@ -52,7 +56,7 @@ namespace ZoeysNursery
         /// <param name="e">update event arguments</param>
         private void update(object sender, UpdateTickedEventArgs e)
         {
-            soundEffectsHandler.update(locationHandler.WaterfallPositionsByLocation);
+            soundEffectsHandler.update(locationHandler.WaterfallPositionsByLocation, waterfallSoundEffectName);
         }
     }
 }
