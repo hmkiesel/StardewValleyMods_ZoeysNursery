@@ -1,4 +1,5 @@
-﻿using StardewModdingAPI;
+﻿using HarmonyLib;
+using StardewModdingAPI;
 using StardewModdingAPI.Events;
 
 namespace ZoeysNursery
@@ -6,7 +7,7 @@ namespace ZoeysNursery
     /// <summary>The mod entry point.</summary>
     public class ModEntry : Mod
     {
-        private static IMonitor monitor;
+        public static IMonitor monitor;
 
         private SoundEffectsHandler soundEffectsHandler;
         private LocationHandler locationHandler;
@@ -20,11 +21,18 @@ namespace ZoeysNursery
             soundEffectsHandler = new SoundEffectsHandler(helper, monitor);
             locationHandler = new LocationHandler(monitor);
 
+
+            helper.Events.GameLoop.GameLaunched += this.onGameLaunched;
             helper.Events.GameLoop.UpdateTicked += this.update;
             helper.Events.GameLoop.DayStarted += this.dayStarted;
         }
 
         /********* Private methods *********/
+
+        private void onGameLaunched(object sender, GameLaunchedEventArgs e)
+        {
+            new Harmony(this.ModManifest.UniqueID).PatchAll(typeof(ModEntry).Assembly);
+        }
 
         /// <summary>
         /// check tile properties for each location, to spawn fruit trees and store all waterfall positions.

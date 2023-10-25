@@ -1,0 +1,10 @@
+﻿{
+  "Name": "HarmonyUtils",
+  "Author": "hmkiesel",
+  "Version": "1.0.0",
+  "Description": "",
+  "UniqueID": "hmkiesel.HarmonyUtils",
+  "EntryDll": "na",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": []
+}

@@ -6,5 +6,15 @@
   "UniqueID": "hmkiesel.ZoeysNursery",
   "EntryDll": "ZoeysNursery.dll",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": []
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "hmkiesel.CP_ZoeysNursery",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "hmkiesel.STF_ZoeysNursery",
+      "IsRequired": true
+    }
+  ]
 }

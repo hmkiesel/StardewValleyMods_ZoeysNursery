@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
+  <PropertyGroup Label="Globals">
     <TargetFramework>net5.0</TargetFramework>
     <EnableHarmony>true</EnableHarmony>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ProjectGuid>{AE9ED9AD-39FC-438B-8BA4-8E9793328C27}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <LangVersion>latestmajor</LangVersion>
@@ -11,20 +13,12 @@
     <LangVersion>latestmajor</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Pathoschild.Stardew.ModBuildConfig" />
-    <None Remove="ICSharpCode.Decompiler" />
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
-    <PackageReference Include="ICSharpCode.Decompiler" Version="8.1.1.7464" />
+    <None Remove="manifest.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="manifest.json" />
-    <Content Include="assets/**/*">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HarmonyUtils\HarmonyUtils.csproj" />
   </ItemGroup>
 </Project>
