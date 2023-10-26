@@ -5,6 +5,7 @@ using System.IO;
 using StardewModdingAPI;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using StardewModdingAPI.Events;
 
 namespace ZoeysNursery
 {
@@ -15,7 +16,6 @@ namespace ZoeysNursery
         private IMonitor monitor;
         private Dictionary<String, ICue> soundEffectCuesByName = new();
         private static float volumeOverrideForLocChange;
-        private static float shortestDistanceForCue;
         private static int updateTimer = 100;
         private static int farthestSoundDistance = 4024;
 
@@ -23,6 +23,8 @@ namespace ZoeysNursery
         {
             this.helper = helper;
             this.monitor = monitor;
+
+            helper.Events.Player.Warped += this.onLocationLeave;
         }
 
         /// <summary>
@@ -60,7 +62,7 @@ namespace ZoeysNursery
                 return;
             }
 
-            shortestDistanceForCue = 9999999f;
+            float shortestDistanceForCue = float.MaxValue;
             Vector2 standingPosition = Game1.player.getStandingPosition();
 
             foreach (Vector2 position in soundEffectPositions)
@@ -89,7 +91,7 @@ namespace ZoeysNursery
         }
 
         /// <summary>
-        /// creates a sound affect cue and adds it to the game's soundbank
+        /// creates a sound effect cue and adds it to the game's soundbank
         /// </summary>
         /// <param name="soundEffectName">name for the sound effect cue</param>
         /// <param name="soundEffectFileName">name of the audio file in assets/ directory</param>
@@ -132,6 +134,22 @@ namespace ZoeysNursery
             soundCue.Pause();
 
             soundEffectCuesByName.Add(soundEffectName, soundCue);
+        }
+
+        /// <summary>
+        /// triggered when farmer warps to a new location, handles pausing sound effect cues
+        /// and resetting update timer / volume override
+        /// </summary>
+        /// <param name="sender">the event sender</param>
+        /// <param name="e">warped event arguments</param>
+        private void onLocationLeave(object sender, WarpedEventArgs e)
+        {
+            volumeOverrideForLocChange = 0f;
+            updateTimer = 0;
+            foreach (ICue cue in soundEffectCuesByName.Values)
+            {
+                cue.Pause();
+            }
         }
     }
 }

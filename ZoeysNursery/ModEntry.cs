@@ -33,6 +33,11 @@ namespace ZoeysNursery
 
         /********* Private methods *********/
 
+        /// <summary>
+        /// triggered when game is launched, loads harmony patches
+        /// </summary>
+        /// <param name="sender">the event sender</param>
+        /// <param name="e">game launched event arguments</param>
         private void onGameLaunched(object sender, GameLaunchedEventArgs e)
         {
             new Harmony(this.ModManifest.UniqueID).PatchAll(typeof(ModEntry).Assembly);
