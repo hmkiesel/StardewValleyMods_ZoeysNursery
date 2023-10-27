@@ -1,5 +1,31 @@
 {
   "Format": "1.27.0",
+  "DynamicTokens": [
+    {
+      "Name": "IsOddYear",
+      "Value": "{{Query: {{Year}} % 2 = 1}}"
+    },
+    {
+      "Name": "ZoeySpiritsEveSetup",
+      "Value": "21 27 left"
+    },
+    {
+      "Name": "ZoeySpiritsEveSetup",
+      "Value": "33 25 right",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP",
+        "Query: {{Year}} % 2 = 1": true
+      }
+    },
+    {
+      "Name": "ZoeySpiritsEveSetup",
+      "Value": "30 22 right",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP",
+        "Query: {{Year}} % 2 = 1": false
+      }
+    }
+  ],
   "CustomLocations": [
     {
       "Name": "Custom_ZoeysNurseryGrove",
@@ -244,6 +270,31 @@
     },
     //Festivals
     {
+      "LogName": "Egg Festival Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring13",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "I don't really understand this festival... Why so many eggs?$n#$b#I'm loving this beautiful weather though!$h"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 29 57 down",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 35 69 left",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
       "LogName": "Flower Dance Patch",
       "Action": "EditData",
       "Target": "Data/Festivals/spring24",
@@ -263,7 +314,142 @@
           "Value": "CustomZoeysNurseryZoey 23 31 left",
           "Delimiter": "/"
         }
-      ]
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
+      "LogName": "Luau Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer11",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "This soup is gonna be so strange right?... I should've had a bigger breakfast this morning.$7#$b#Whatever Linus is cooking up smells good though."
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 26 19 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 30 14 right",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
+      "LogName": "Moonlight Jelly Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/summer28",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "I wonder where the jellies come from... They're so mysterious."
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 11 22 left",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "MainEvent_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 11 22 left",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
+      "LogName": "Fair Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall16",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "Penny was just telling me about all the books she's been reading.$n#$b#She's gonna lend me one of her favorites!$h#$e#Are you enjoying the fair, @?$h"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 36 70 right",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
+      "LogName": "Spirit's Eve Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/fall27",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "This maze is really something huh?...#$b#I'm not scared! I just took a break to admire the Wizard's work.$h#$e#Okay, maybe I'm a little scared...$7"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey {{ZoeySpiritsEveSetup}}",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
+      "LogName": "Ice Festival Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter8",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "Leah is so good with her hands...#$e#@, are you entering the competition?#$e#You have gloves right? Don't want your fingers to freeze up. Good luck!!$h"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 67 15 up",
+          "Delimiter": "/"
+        },
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Main-Event_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 69 27 down",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
+    },
+    {
+      "LogName": "Winter Star Patch",
+      "Action": "EditData",
+      "Target": "Data/Festivals/winter25",
+      "Entries": {
+        "CustomZoeysNurseryZoey": "This time of year, it's easy to feel lonely... Makes me wish I had family to celebrate with.$s#$b#But this festival brings us all together... It's a really nice tradition.$h"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Set-Up_additionalCharacters" ],
+          "Value": "CustomZoeysNurseryZoey 32 57 left",
+          "Delimiter": "/"
+        }
+      ],
+      "When": {
+        "HasFlag": "ccBoilerRoom"
+      }
     }
   ]
 }
