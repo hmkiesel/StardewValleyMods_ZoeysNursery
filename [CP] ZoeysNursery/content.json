@@ -450,6 +450,149 @@
       "When": {
         "HasFlag": "ccBoilerRoom"
       }
+    },
+    {
+      "LogName": "Concession Tastes Patch",
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "CustomZoeysNurseryZoey": {
+          "Name": "CustomZoeysNurseryZoey",
+          "LovedTags": [
+            "Sour Slimes"
+          ],
+          "LikedTags": [
+            "Salty",
+            "Sweet",
+            "Candy",
+            "Sour"
+          ],
+          "DislikedTags": [
+            "Fatty",
+            "Joja",
+            "Salmon Burger",
+            "Jawbreaker"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Movie Reactions Patch"
+      "Action": "EditData",
+      "Target": "Data/MoviesReactions",
+      "Entries": {
+        "CustomZoeysNurseryZoey": {
+          "NPCName": "CustomZoeysNurseryZoey",
+          "Reactions": [
+            {
+              "Tag": "winter_movie_1", //romance movie
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "Text": "If I cry... Just hold my hand. $h"
+                },
+                "DuringMovie": {
+                  "ResponsePoint": "zuzucityexpress_mind_heart",
+                  "Script": "/message \"Zoey makes eye contact with you\"",
+                  "Text": "...It's so romatic.$l"
+                },
+                "AfterMovie": {
+                  "Text": "Aww I loved the movie so much, @.. Thank you for inviting me.$h"
+                }
+              },
+              "ID": "reaction_4"
+            },
+            {
+              "Tag": "fall_movie_1", //horror movie
+              "Response": "like",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "Text": "Are there jump scares?? I'm excited.$h"
+                },
+                "DuringMovie": {
+                  "Text": "Hey, if you're scared just hold on to me.$0"
+                },
+                "AfterMovie": {
+                  "Text": "That was thrilling!$h"
+                }
+              },
+              "ID": "reaction_5"
+            },
+            {
+              "Tag": "romance",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "Text": "I've been looking forward to this!$h"
+                },
+                "DuringMovie": {
+                  "Script": "/emote CustomZoeysNurseryZoey 20/pause 2000/message \"Zoey is smiling!\"",
+                  "Text": "@, did you see that?$h"
+                },
+                "AfterMovie": {
+                  "Text": "Oh my, @. That was so good!! It might be my new all time favorite.$h"
+                }
+              },
+              "ID": "reaction_0"
+            },
+            {
+              "Tag": "horror",
+              "Response": "love",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "Text": "I'm so excited for this movie!$h"
+                },
+                "DuringMovie": {
+                  "Script": "/shake CustomZoeysNurseryZoey 2000/pause 500/message \"Zoey is gripping your arm!\"",
+                  "Text": "AH!!! @, did you see that?$h"
+                },
+                "AfterMovie": {
+                  "Text": "Oh my, @. That was so thrilling!! I feel so alive!$h"
+                }
+              },
+              "ID": "reaction_1"
+            },
+            {
+              "Tag": "action",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "Text": "...Do you like this type of movie? I hope it's enjoyable for you."
+                },
+                "DuringMovie": {
+                  "Script": "/emote CustomZoeysNurseryZoey 24/message \"Zoey fell asleep...\""
+                },
+                "AfterMovie": {
+                  "Text": "Sorry for falling asleep on you.. Did you have fun?"
+                }
+              },
+              "ID": "reaction_2"
+            },
+            {
+              "Tag": "sci-fi",
+              "Response": "dislike",
+              "Whitelist": [],
+              "SpecialResponses": {
+                "BeforeMovie": {
+                  "Text": "...Do you like this type of movie? I hope it's enjoyable for you."
+                },
+                "DuringMovie": {
+                  "Script": "/emote CustomZoeysNurseryZoey 24/message \"Zoey fell asleep...\""
+                },
+                "AfterMovie": {
+                  "Text": "Sorry for falling asleep on you.. Did you have fun?"
+                }
+              },
+              "ID": "reaction_3"
+            }
+          ]
+        }
+      }
     }
   ]
 }
